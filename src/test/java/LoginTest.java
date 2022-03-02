@@ -20,7 +20,6 @@ public class LoginTest extends AbstractTest{
 
     @Test
     void loginNegativeTest() throws InterruptedException {
-
         new HappySushiMainPage(getWebDriver()).goToAccountPage();
         Assertions.assertTrue(getWebDriver().getTitle().equals("Вход в личный кабинет"), "страница входа недоступна");
         new LoginPage(getWebDriver()).loginIn("5555","Angela2221A");
@@ -29,7 +28,7 @@ public class LoginTest extends AbstractTest{
         Assertions.assertTrue(getWebDriver().getTitle().equals("Вход в личный кабинет"), "Другая страница");
     }
 
-   /* @Test
+    @Test
     void AuthorizeCheckHistoryAndLogOutTest() throws InterruptedException {
 
 
@@ -46,7 +45,7 @@ public class LoginTest extends AbstractTest{
         new LoginPage(getWebDriver()).logOut();
         Thread.sleep(2000);
         Assertions.assertTrue(getWebDriver().getTitle().equals("Вход в личный кабинет"), "страница входа недоступна");
-    }*/
+    }
 
 
 }
